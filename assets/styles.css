@@ -1,0 +1,249 @@
+/* Balcô — páginas legais. Fonte do sistema (sem download externo),
+   sem fontes/ícones/scripts de terceiros, sem rastreamento. */
+
+:root {
+  --balco-blue: #123f7a;
+  --balco-blue-dark: #0d2c57;
+  --text: #1a1a1a;
+  --text-muted: #4b5563;
+  --bg: #ffffff;
+  --bg-alt: #f5f7fa;
+  --border: #e2e6ea;
+  --max-width: 760px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  -webkit-text-size-adjust: 100%;
+}
+
+body {
+  margin: 0;
+  font-family: -apple-system, 'Segoe UI', Roboto, Helvetica, Arial, sans-serif;
+  color: var(--text);
+  background: var(--bg);
+  line-height: 1.6;
+  font-size: 17px;
+}
+
+.skip-link {
+  position: absolute;
+  left: -999px;
+  top: 0;
+  background: var(--balco-blue);
+  color: #fff;
+  padding: 0.5rem 1rem;
+  z-index: 10;
+}
+
+.skip-link:focus {
+  left: 0.5rem;
+  top: 0.5rem;
+}
+
+a {
+  color: var(--balco-blue);
+  text-decoration: underline;
+}
+
+a:focus-visible,
+button:focus-visible {
+  outline: 3px solid var(--balco-blue);
+  outline-offset: 2px;
+}
+
+.site-header {
+  background: var(--balco-blue);
+  color: #fff;
+  padding: 1.25rem 1.25rem 0.5rem;
+  text-align: center;
+}
+
+.brand {
+  display: inline-flex;
+  align-items: center;
+  gap: 0.5rem;
+  color: #fff;
+  text-decoration: none;
+  font-weight: 700;
+  font-size: 1.4rem;
+}
+
+.brand-mark {
+  width: 2rem;
+  height: 2rem;
+  border-radius: 0.5rem;
+  background: #fff;
+  color: var(--balco-blue);
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  font-weight: 800;
+}
+
+.brand-sub {
+  margin: 0.25rem 0 0.75rem;
+  font-size: 0.85rem;
+  opacity: 0.85;
+}
+
+.site-nav {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 0.75rem;
+  background: var(--bg-alt);
+  border-bottom: 1px solid var(--border);
+  padding: 0.75rem 1rem;
+}
+
+.site-nav a {
+  text-decoration: none;
+  padding: 0.4rem 0.75rem;
+  border-radius: 0.4rem;
+  color: var(--balco-blue-dark);
+  font-weight: 600;
+  font-size: 0.95rem;
+}
+
+.site-nav a[aria-current='page'] {
+  background: var(--balco-blue);
+  color: #fff;
+}
+
+main {
+  max-width: var(--max-width);
+  margin: 0 auto;
+  padding: 1.5rem 1.25rem 3rem;
+}
+
+h1 {
+  font-size: 1.6rem;
+  color: var(--balco-blue-dark);
+}
+
+h2 {
+  font-size: 1.15rem;
+  color: var(--balco-blue-dark);
+  margin-top: 2rem;
+}
+
+p {
+  color: var(--text);
+}
+
+.meta {
+  color: var(--text-muted);
+  font-size: 0.9rem;
+}
+
+.notice {
+  border: 1px solid var(--balco-blue);
+  background: var(--bg-alt);
+  border-radius: 0.5rem;
+  padding: 1rem 1.25rem;
+  margin: 1.5rem 0;
+}
+
+.notice.notice-blocked {
+  border-color: #b45309;
+  background: #fff7ed;
+}
+
+#account-deletion-app {
+  margin: 1rem 0;
+}
+
+#account-deletion-app form {
+  display: flex;
+  flex-direction: column;
+  gap: 0.5rem;
+  max-width: 420px;
+}
+
+#account-deletion-app label {
+  font-weight: 600;
+}
+
+#account-deletion-app input[type='email'] {
+  border: 1px solid var(--border);
+  border-radius: 0.4rem;
+  padding: 0.6rem 0.75rem;
+  font-size: 1rem;
+}
+
+#account-deletion-app button {
+  align-self: flex-start;
+  background: var(--balco-blue);
+  color: #fff;
+  border: none;
+  border-radius: 0.4rem;
+  padding: 0.6rem 1.1rem;
+  font-size: 1rem;
+  font-weight: 600;
+  cursor: pointer;
+}
+
+#account-deletion-app button:disabled {
+  opacity: 0.6;
+  cursor: not-allowed;
+}
+
+#account-deletion-app button:hover:not(:disabled) {
+  background: var(--balco-blue-dark);
+}
+
+#account-deletion-app p[role='status'] {
+  font-size: 0.95rem;
+  color: var(--text-muted);
+  margin: 0.25rem 0 0;
+}
+
+.notice-title {
+  font-weight: 700;
+  margin: 0 0 0.5rem;
+  color: var(--balco-blue-dark);
+}
+
+.notice-blocked .notice-title {
+  color: #b45309;
+}
+
+.review-marker {
+  color: #b45309;
+  font-weight: 700;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+  margin: 1rem 0;
+}
+
+th,
+td {
+  border: 1px solid var(--border);
+  padding: 0.5rem 0.6rem;
+  text-align: left;
+  font-size: 0.95rem;
+}
+
+.site-footer {
+  text-align: center;
+  padding: 1.5rem 1rem 2.5rem;
+  color: var(--text-muted);
+  font-size: 0.85rem;
+  border-top: 1px solid var(--border);
+}
+
+@media (max-width: 480px) {
+  body {
+    font-size: 16px;
+  }
+  h1 {
+    font-size: 1.35rem;
+  }
+}

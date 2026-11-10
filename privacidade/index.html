@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Política de Privacidade — Balcô</title>
+  <meta name="description" content="Política de Privacidade do aplicativo Balcô, produzido pela Nexus Sistemas e Automações.">
+  <!-- noindex enquanto a página ainda não foi revisada/publicada pelo proprietário — remover do HTML gerado antes do deploy real, ver legal-site/README.md -->
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="/balco-legal/assets/styles.css">
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+  <header class="site-header">
+    <a class="brand" href="/balco-legal/">
+      <span class="brand-mark" aria-hidden="true">B</span>
+      <span class="brand-name">Balcô</span>
+    </a>
+    <p class="brand-sub">Nexus Sistemas e Automações</p>
+  </header>
+  <nav class="site-nav" aria-label="Páginas legais">
+    <a href="/balco-legal/privacidade/" aria-current="page">Política de Privacidade</a>
+    <a href="/balco-legal/termos/">Termos de Uso</a>
+    <a href="/balco-legal/exclusao-de-conta/">Exclusão de Conta e Dados</a>
+  </nav>
+  <main id="conteudo">
+    <h1>Política de Privacidade</h1>
+    <p class="meta">Versão: 2026-09-25</p>
+    <section aria-labelledby="1-quem-opera-o-balco">
+      <h2 id="1-quem-opera-o-balco">1. Quem opera o Balcô</h2>
+      <p>Balcô é produzido e desenvolvido por Nexus Sistemas e Automações.</p>
+      <p>Esta Política explica quais dados o Balcô coleta, para quê, como são armazenados e com quem podem ser compartilhados — sempre em linguagem clara, baseada no que o aplicativo realmente faz.</p>
+    </section>
+    <section aria-labelledby="2-finalidade-do-aplicativo">
+      <h2 id="2-finalidade-do-aplicativo">2. Finalidade do aplicativo</h2>
+      <p>O Balcô existe para ajudar pequenos estabelecimentos a controlar comandas, vendas, fiado e histórico financeiro, substituindo anotações em papel — dentro de uma única equipe/estabelecimento por vez, nunca compartilhando dados entre estabelecimentos diferentes.</p>
+    </section>
+    <section aria-labelledby="3-criacao-de-conta-e-autenticacao">
+      <h2 id="3-criacao-de-conta-e-autenticacao">3. Criação de conta e autenticação</h2>
+      <p>Para usar o Balcô, coletamos seu e-mail. O e-mail é usado só para autenticação e para identificar quem fez cada ação dentro do estabelecimento.</p>
+      <p>Sua senha nunca é armazenada nem processada pelo Balcô: ao criar a conta ou entrar, o aplicativo envia a senha diretamente ao Supabase Auth por uma conexão segura (HTTPS) — é o Supabase Auth quem a transforma em hash e a armazena, um processo que o Balcô nunca vê nem participa. O Balcô também nunca registra sua senha em nenhum log.</p>
+    </section>
+    <section aria-labelledby="4-dados-do-estabelecimento">
+      <h2 id="4-dados-do-estabelecimento">4. Dados do estabelecimento</h2>
+      <p>Armazenamos o nome e fuso horário do estabelecimento, seus produtos, categorias e preços, e o registro de comandas, itens, vendas, pagamentos e a cor de identidade visual escolhida — dados operacionais do negócio, não dados pessoais de terceiros.</p>
+    </section>
+    <section aria-labelledby="5-dados-de-usuarios-e-funcionarios">
+      <h2 id="5-dados-de-usuarios-e-funcionarios">5. Dados de usuários e funcionários</h2>
+      <p>Guardamos o nome informado no cadastro e as permissões atribuídas a cada membro da equipe, além de um registro de auditoria (quem fez o quê, quando) — nunca senha ou token de acesso nesse registro. Se um funcionário exclui sua conta, seu nome pode continuar aparecendo como um texto simples (&quot;cancelado por Fulano&quot;) em registros que já existiam, mas nunca junto de e-mail ou telefone.</p>
+    </section>
+    <section aria-labelledby="6-clientes-de-fiado">
+      <h2 id="6-clientes-de-fiado">6. Clientes de Fiado</h2>
+      <p>O estabelecimento pode cadastrar nome e, opcionalmente, telefone de clientes de Fiado — apenas os dados necessários para controlar o saldo devedor e, se o telefone for informado, sugerir automaticamente o número ao enviar uma cobrança por WhatsApp. O Balcô não incentiva nem exige coleta de mais dados do que isso.</p>
+    </section>
+    <section aria-labelledby="7-telefone-informado-para-envio-por-whatsapp">
+      <h2 id="7-telefone-informado-para-envio-por-whatsapp">7. Telefone informado para envio por WhatsApp</h2>
+      <p>Ao compartilhar uma venda, comanda ou recibo pelo WhatsApp, o número digitado na hora é efêmero: existe só enquanto aquela tela está aberta e nunca é salvo em nenhum registro do Balcô.</p>
+      <p>Isso é diferente do telefone salvo no cadastro de um cliente de Fiado (seção anterior) — esse SIM fica armazenado, porque faz parte do cadastro do cliente, não de um envio pontual.</p>
+    </section>
+    <section aria-labelledby="8-comandas-vendas-e-pagamentos">
+      <h2 id="8-comandas-vendas-e-pagamentos">8. Comandas, vendas e pagamentos</h2>
+      <p>Itens, quantidades, descontos, formas de pagamento e valores de cada comanda ou venda são armazenados para compor o histórico e os resumos financeiros do estabelecimento. São dados do negócio, e o Balcô nunca processa o pagamento em si — só registra como ele foi feito.</p>
+    </section>
+    <section aria-labelledby="9-historico">
+      <h2 id="9-historico">9. Histórico</h2>
+      <p>O histórico de vendas, comandas e recebimentos fica disponível para consulta por período, incluindo vendas já canceladas (marcadas como tal, nunca removidas) — é a mesma informação já coletada nas seções anteriores, organizada para consulta.</p>
+    </section>
+    <section aria-labelledby="10-sincronizacao-e-armazenamento-offline">
+      <h2 id="10-sincronizacao-e-armazenamento-offline">10. Sincronização e armazenamento offline</h2>
+      <p>O Balcô funciona offline: os dados ficam guardados localmente no seu aparelho (banco de dados local) e são sincronizados automaticamente com o Supabase (nosso banco de dados na nuvem) através do PowerSync assim que há conexão — para que todos os aparelhos do mesmo estabelecimento vejam as mesmas informações.</p>
+    </section>
+    <section aria-labelledby="11-assinatura">
+      <h2 id="11-assinatura">11. Assinatura</h2>
+      <p>Para controlar sua assinatura, armazenamos um identificador aleatório de cliente gerado pelo RevenueCat e o status/plano/data de renovação da assinatura — nunca seu e-mail ou nome são enviados ao RevenueCat.</p>
+      <p>Dados de pagamento (como número de cartão) não são coletados nem armazenados pelo Balcô em nenhuma hipótese: a cobrança é processada inteiramente pela Google Play.</p>
+    </section>
+    <section aria-labelledby="12-servicos-de-terceiros-que-utilizamos">
+      <h2 id="12-servicos-de-terceiros-que-utilizamos">12. Serviços de terceiros que utilizamos</h2>
+      <p>• Supabase (banco de dados, autenticação e funções de servidor) — processa seu e-mail, a senha que você digita para autenticar (recebida por ele diretamente, nunca pelo Balcô) e todos os dados operacionais do estabelecimento.</p>
+      <p>• PowerSync — mecanismo de sincronização entre o banco local do seu aparelho e o Supabase; não é um destino adicional de dados, é o &quot;encanamento&quot; do mesmo banco.</p>
+      <p>• RevenueCat — gerencia o status da sua assinatura (ver seção 11).</p>
+      <p>• Google Play — processa a cobrança da assinatura (Google Play Billing) quando você contrata um plano pago.</p>
+      <p>• WhatsApp — recebe apenas o que você mesmo decide enviar através de um link padrão de compartilhamento; não é uma integração automática, e o Balcô nunca acessa sua conta do WhatsApp.</p>
+      <p>Não utilizamos nenhum outro serviço de terceiros além dos listados acima.</p>
+    </section>
+    <section aria-labelledby="13-pagamentos">
+      <h2 id="13-pagamentos">13. Pagamentos</h2>
+      <p>O Balcô não armazena dados completos de cartão de crédito/débito do assinante. Na versão Android, a assinatura é processada pela Google Play; o RevenueCat auxilia apenas no controle do status dessa assinatura (ativa, em teste, cancelada, etc.) — o RevenueCat não recebe nem processa o pagamento em si.</p>
+    </section>
+    <section aria-labelledby="14-armazenamento-e-seguranca">
+      <h2 id="14-armazenamento-e-seguranca">14. Armazenamento e segurança</h2>
+      <p>Adotamos medidas técnicas e administrativas razoáveis para proteger os dados armazenados (controle de acesso por estabelecimento, permissões por função, conexões sempre criptografadas). Sua senha em si nunca passa pelo Balcô — ela vai direto ao Supabase Auth por conexão segura, que a protege do lado dele (ver seção 3). Nenhum sistema, porém, é absolutamente invulnerável — não prometemos segurança absoluta, e sim um cuidado contínuo e proporcional à natureza dos dados tratados.</p>
+    </section>
+    <section aria-labelledby="15-retencao-de-dados">
+      <h2 id="15-retencao-de-dados">15. Retenção de dados</h2>
+      <p>Mantemos os dados enquanto sua conta e/ou seu estabelecimento estiverem ativos, ou enquanto forem necessários para as finalidades descritas nesta Política. Alguns registros (como histórico financeiro e trilhas de auditoria) podem ser preservados mesmo após a saída de um usuário, quando necessário para a integridade dos registros do estabelecimento — nunca vinculados a dados de contato desse usuário depois que sua conta é excluída.</p>
+    </section>
+    <section aria-labelledby="16-exclusao-de-conta">
+      <h2 id="16-exclusao-de-conta">16. Exclusão de conta</h2>
+      <p>Você pode solicitar a exclusão da sua conta a qualquer momento, dentro do próprio aplicativo (Conta → Excluir minha conta). Sua conta de autenticação (e-mail/senha) é excluída de verdade, não apenas desativada. Também disponibilizaremos uma forma de solicitar a exclusão pela internet, para quem não tiver o aplicativo instalado.</p>
+      <p>Se você for proprietário de um estabelecimento ativo, a exclusão exige primeiro resolver essa situação — transferindo a titularidade para outra pessoa do estabelecimento ou solicitando o encerramento do estabelecimento — antes de a exclusão da sua conta ser concluída.</p>
+      <p>Vendas, comandas e pagamentos que você já registrou continuam preservados no histórico do estabelecimento mesmo após a exclusão da sua conta — isso pode ser necessário por obrigações legais, prevenção a fraude, segurança ou integridade dos registros financeiros do estabelecimento, que não deixam de existir só porque uma pessoa que os registrou saiu.</p>
+    </section>
+    <section aria-labelledby="17-seus-direitos-lgpd">
+      <h2 id="17-seus-direitos-lgpd">17. Seus direitos (LGPD)</h2>
+      <p>Como titular de dados pessoais, você pode solicitar a qualquer momento: confirmação de que tratamos seus dados, acesso a eles, correção de dados incompletos ou desatualizados, portabilidade, informação sobre com quem compartilhamos seus dados, e a exclusão dos dados que não precisam ser retidos pelos motivos descritos nesta Política. Você pode exercer esses direitos pelos canais de contato informados na seção seguinte, quando disponíveis, ou diretamente pelas funções já existentes no aplicativo (como excluir sua conta).</p>
+    </section>
+    <section aria-labelledby="18-alteracoes-desta-politica">
+      <h2 id="18-alteracoes-desta-politica">18. Alterações desta Política</h2>
+      <p>Podemos atualizar esta Política para refletir mudanças no Balcô, nos serviços que utilizamos ou na legislação aplicável. Mudanças relevantes exigem um novo aceite (ver versão no topo desta tela); guardamos o registro de qual versão você aceitou e quando.</p>
+    </section>
+    <section aria-labelledby="19-contato-do-responsavel">
+      <h2 id="19-contato-do-responsavel">19. Contato do responsável</h2>
+      <p>Balcô é produzido e desenvolvido por Nexus Sistemas e Automações.</p>
+      <p>Os canais de contato direto ainda serão publicados aqui.</p>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <p>Balcô é produzido e desenvolvido por Nexus Sistemas e Automações.</p>
+  </footer>
+</body>
+</html>

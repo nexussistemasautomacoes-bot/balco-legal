@@ -1,0 +1,94 @@
+<!doctype html>
+<html lang="pt-BR">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>Exclusão de Conta e Dados — Balcô</title>
+  <meta name="description" content="Como solicitar a exclusão da sua conta e dos seus dados no Balcô, com ou sem o aplicativo instalado.">
+  <!-- noindex enquanto a página ainda não foi revisada/publicada pelo proprietário — remover do HTML gerado antes do deploy real, ver legal-site/README.md -->
+  <meta name="robots" content="noindex">
+  <link rel="stylesheet" href="/balco-legal/assets/styles.css">
+  <script>
+    window.__BALCO_SUPABASE_URL__ = "https://twtskxaemdrsdgzdlmob.supabase.co";
+    window.__BALCO_SUPABASE_PUBLISHABLE_KEY__ = "sb_publishable_e2WWvMQUjPNWhUcalerjqQ_NWMhy9MI";
+  </script>
+  <script src="/balco-legal/assets/account-deletion-logic.js"></script>
+</head>
+<body>
+  <a class="skip-link" href="#conteudo">Ir para o conteúdo</a>
+  <header class="site-header">
+    <a class="brand" href="/balco-legal/">
+      <span class="brand-mark" aria-hidden="true">B</span>
+      <span class="brand-name">Balcô</span>
+    </a>
+    <p class="brand-sub">Nexus Sistemas e Automações</p>
+  </header>
+  <nav class="site-nav" aria-label="Páginas legais">
+    <a href="/balco-legal/privacidade/">Política de Privacidade</a>
+    <a href="/balco-legal/termos/">Termos de Uso</a>
+    <a href="/balco-legal/exclusao-de-conta/" aria-current="page">Exclusão de Conta e Dados</a>
+  </nav>
+  <main id="conteudo">
+    <h1>Exclusão de Conta e Dados</h1>
+    <p class="meta">Esta página explica como solicitar a exclusão da sua conta do Balcô, com ou sem o aplicativo instalado.</p>
+
+    <section aria-labelledby="caminho-no-app">
+      <h2 id="caminho-no-app">Se você tem o aplicativo instalado</h2>
+      <p>Entre no Balcô e acesse <strong>Mais opções → Conta → Excluir minha conta</strong>. Esse é o caminho principal, já disponível hoje, e sua conta de autenticação (e-mail/senha) é excluída de verdade — não apenas desativada.</p>
+      <p>Se você for a única pessoa proprietária de um estabelecimento ativo, a exclusão exige primeiro transferir a propriedade para outra pessoa da equipe ou solicitar o encerramento do estabelecimento, antes de a exclusão da sua conta ser concluída. O próprio aplicativo explica esse passo quando necessário.</p>
+    </section>
+
+    <section aria-labelledby="caminho-sem-app">
+      <h2 id="caminho-sem-app">Se você não tem o aplicativo instalado</h2>
+      <div class="notice">
+        <p class="notice-title">Status desta implementação</p>
+        <p>Este formulário usa o mesmo sistema de autenticação do Balcô (Supabase Auth) e funciona sem precisar instalar o aplicativo. <strong>Ainda não está ativo em produção</strong> — falta publicar este site numa URL real e autorizar o cadastro dela como redirecionamento confiável no Supabase. Até lá, use a exclusão dentro do aplicativo.</p>
+      </div>
+      <div id="account-deletion-app">
+        <div id="ad-step-email">
+          <form id="ad-email-form" novalidate>
+            <label for="ad-email-input">E-mail da sua conta no Balcô</label>
+            <input type="email" id="ad-email-input" name="email" required autocomplete="email" inputmode="email">
+            <button type="submit" id="ad-submit-button">Enviar link de confirmação</button>
+            <p id="ad-form-message" role="status" aria-live="polite"></p>
+          </form>
+        </div>
+        <div id="ad-step-confirm" hidden>
+          <p id="ad-confirm-message" role="status" aria-live="polite"></p>
+          <p>Antes de confirmar: vendas, comandas e pagamentos que você já registrou continuam preservados no histórico do estabelecimento, mesmo após a exclusão — obrigações legais, prevenção a fraude e integridade de registros financeiros podem exigir essa retenção. Esta ação não exclui documentos financeiros sujeitos a obrigação de guarda.</p>
+          <button type="button" id="ad-confirm-button">Confirmar exclusão da minha conta</button>
+        </div>
+        <div id="ad-step-result" hidden>
+          <p id="ad-result-message" role="status" aria-live="polite"></p>
+        </div>
+        <p><button type="button" id="ad-status-button">Consultar status da minha solicitação</button></p>
+      </div>
+
+    </section>
+
+    <section aria-labelledby="dados-abrangidos">
+      <h2 id="dados-abrangidos">Quais dados são abrangidos</h2>
+      <p>A exclusão remove de verdade sua conta de autenticação (e-mail e credencial de acesso) e seus vínculos (memberships) com qualquer estabelecimento. Seu nome pode continuar aparecendo como um texto simples em registros que já existiam antes da exclusão (por exemplo, "cancelado por Fulano" no histórico de um estabelecimento), nunca junto do seu e-mail ou telefone.</p>
+    </section>
+
+    <section aria-labelledby="retencao-legal">
+      <h2 id="retencao-legal">Retenções que podem se aplicar</h2>
+      <p>Vendas, comandas e pagamentos que você já registrou continuam preservados no histórico do estabelecimento mesmo após a exclusão da sua conta — isso pode ser necessário por obrigações legais (fiscais/contábeis), prevenção a fraude, segurança ou para preservar a integridade dos registros financeiros de um estabelecimento, que não deixam de existir só porque uma pessoa que os registrou saiu. Esta página nunca promete a exclusão de documentos financeiros sujeitos a obrigação de guarda.</p>
+    </section>
+
+    <section aria-labelledby="prazo">
+      <h2 id="prazo">Prazo e confirmação</h2>
+      <p>Pedidos feitos dentro do aplicativo são confirmados imediatamente pelo próprio app. Pelo formulário externo, a confirmação acontece assim que você clicar em "Confirmar exclusão" depois de validar seu e-mail — nunca automaticamente só por clicar no link recebido.</p>
+    </section>
+
+    <section aria-labelledby="contato-privacidade">
+      <h2 id="contato-privacidade">Dúvidas sobre privacidade</h2>
+      <p>Consulte a <a href="/balco-legal/privacidade/">Política de Privacidade</a>, seção "Contato do responsável".</p>
+    </section>
+  </main>
+  <footer class="site-footer">
+    <p>Balcô é produzido e desenvolvido por Nexus Sistemas e Automações.</p>
+  </footer>
+  <script type="module" src="/balco-legal/assets/account-deletion-app.js"></script>
+</body>
+</html>
